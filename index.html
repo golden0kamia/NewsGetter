@@ -3,16 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#d9d3c4">
     <title>News Feed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=VT323&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>News Feed</h1>
-        <div class="news-grid" id="newsGrid">
+        <header class="console">
+            <div class="console-screen">
+                <h1>NEWS<span class="blink">_</span>FEED</h1>
+                <p class="console-status" id="feedStatus">&gt; INITIALISING...</p>
+            </div>
+            <div class="console-controls">
+                <div class="led-group">
+                    <span class="led" id="statusLed" aria-hidden="true"></span>
+                    <span class="led-label">SIGNAL</span>
+                </div>
+                <div class="stripes" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                </div>
+                <span class="model-tag">MOD. NG-1625</span>
+            </div>
+        </header>
+        <main class="news-grid" id="newsGrid" aria-live="polite">
             <!-- News cards will be dynamically inserted here -->
-        </div>
+        </main>
     </div>
     <script src="app.js"></script>
 </body>
